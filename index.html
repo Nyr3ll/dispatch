@@ -22,7 +22,6 @@ h1{font-size:1.1rem;margin:0 0 16px;color:var(--mu);font-weight:600}
 .note{font-size:.85rem;color:var(--mu);margin-top:6px}
 .disp{font-size:1.3rem;font-weight:600;margin:4px 0 2px}
 .tel{font-size:1.15rem;color:var(--mu);margin-bottom:14px}
-.call{display:block;text-align:center;background:var(--ok);color:#fff;text-decoration:none;font-weight:700;font-size:1.2rem;padding:16px;border-radius:14px}
 .row{display:flex;gap:10px;flex-wrap:wrap}
 button,select{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;flex:1}
 button.p{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
@@ -42,7 +41,6 @@ button.p{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
   <div class="lbl">Dispatch à appeler</div>
   <div class="disp" id="disp"></div>
   <div class="tel" id="tel"></div>
-  <a class="call" id="call" href="#">📞 Appeler</a>
 </div>
 
 <div class="card">
@@ -61,29 +59,29 @@ button.p{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
  ======================================================================== -->
 <script id="config" type="application/json">
 {
-  "appName": "Quel dispatch appeler ?",
+  "appName": "Dispatch",
   "provinces": [
-    {"id":"bxl","nom":"Région de Bruxelles-Capitale","dispatch":"Dispatch Bruxelles","telephone":"+32 2 000 00 01",
+    {"id":"bxl","nom":"Bx Capital","dispatch":"KiBru","telephone":"278",
      "polygone":[[4.31,50.82],[4.38,50.90],[4.48,50.91],[4.48,50.86],[4.43,50.80],[4.36,50.78]]},
-    {"id":"ant","nom":"Anvers","dispatch":"Dispatch Anvers","telephone":"+32 3 000 00 02",
+    {"id":"ant","nom":"Anvers","dispatch":"CiKan","telephone":"100",
      "polygone":[[4.24,51.38],[4.35,51.48],[4.78,51.50],[5.10,51.47],[5.12,51.30],[5.05,51.15],[4.85,51.02],[4.60,51.00],[4.45,51.05],[4.28,51.12]]},
-    {"id":"lim","nom":"Limbourg","dispatch":"Dispatch Limbourg","telephone":"+32 11 00 00 03",
+    {"id":"lim","nom":"Limbourg","dispatch":"CiLum","telephone":"700",
      "polygone":[[5.10,51.47],[5.55,51.50],[5.80,51.20],[5.85,50.95],[5.95,50.75],[5.70,50.72],[5.45,50.77],[5.20,50.78],[5.05,50.88],[5.05,51.15],[5.12,51.30]]},
-    {"id":"ovl","nom":"Flandre orientale","dispatch":"Dispatch Flandre orientale","telephone":"+32 9 000 00 04",
+    {"id":"ovl","nom":"Flandre orientale","dispatch":"CiKov","telephone":"400",
      "polygone":[[3.37,51.37],[4.25,51.38],[4.25,51.20],[4.10,51.03],[4.05,50.85],[3.95,50.73],[3.70,50.75],[3.70,50.90],[3.60,51.05],[3.45,51.25]]},
-    {"id":"wvl","nom":"Flandre occidentale","dispatch":"Dispatch Flandre occidentale","telephone":"+32 50 00 00 05",
+    {"id":"wvl","nom":"Flandre occidentale","dispatch":"CiWes","telephone":"300",
      "polygone":[[2.55,51.09],[3.37,51.37],[3.45,51.25],[3.60,51.05],[3.70,50.90],[3.70,50.75],[3.50,50.77],[3.25,50.72],[3.05,50.77],[2.85,50.72],[2.55,50.85]]},
-    {"id":"vbr","nom":"Brabant flamand","dispatch":"Dispatch Brabant flamand","telephone":"+32 16 00 00 06",
+    {"id":"vbr","nom":"Brabant flamand","dispatch":"CiVla","telephone":"1000",
      "polygone":[[4.05,50.85],[4.28,51.12],[4.45,51.05],[4.60,51.00],[4.85,51.02],[5.05,50.95],[5.10,50.85],[5.05,50.78],[4.95,50.75],[4.75,50.72],[4.55,50.72],[4.40,50.72],[4.25,50.75],[4.10,50.75]]},
-    {"id":"bwa","nom":"Brabant wallon","dispatch":"Dispatch Brabant wallon","telephone":"+32 10 00 00 07",
+    {"id":"bwa","nom":"Brabant wallon","dispatch":"CiWal","telephone":"1100",
      "polygone":[[4.20,50.75],[4.55,50.72],[4.95,50.75],[5.05,50.65],[4.90,50.58],[4.60,50.55],[4.30,50.58],[4.20,50.65]]},
-    {"id":"hai","nom":"Hainaut","dispatch":"Dispatch Hainaut","telephone":"+32 65 00 00 08",
+    {"id":"hai","nom":"Hainaut","dispatch":"CiNo","telephone":"500",
      "polygone":[[3.05,50.77],[3.25,50.72],[3.50,50.77],[3.70,50.75],[3.95,50.73],[4.20,50.75],[4.20,50.65],[4.30,50.58],[4.60,50.55],[4.55,50.40],[4.45,50.30],[4.40,50.15],[4.35,49.98],[4.20,49.95],[4.10,50.10],[3.95,50.30],[3.65,50.35],[3.40,50.35],[3.25,50.50],[3.10,50.60],[2.95,50.70]]},
-    {"id":"nam","nom":"Namur","dispatch":"Dispatch Namur","telephone":"+32 81 00 00 09",
+    {"id":"nam","nom":"Namur","dispatch":"CiNam","telephone":"900",
      "polygone":[[4.60,50.55],[4.90,50.58],[5.05,50.65],[5.20,50.60],[5.30,50.50],[5.30,50.40],[5.25,50.30],[5.20,50.15],[5.15,50.05],[4.90,49.97],[4.65,49.98],[4.40,49.98],[4.40,50.15],[4.45,50.30],[4.55,50.40]]},
-    {"id":"lie","nom":"Liège","dispatch":"Dispatch Liège","telephone":"+32 4 000 00 10",
+    {"id":"lie","nom":"Liège","dispatch":"CiLié","telephone":"600",
      "polygone":[[5.05,50.65],[5.20,50.78],[5.45,50.77],[5.70,50.72],[5.95,50.75],[6.03,50.80],[6.25,50.65],[6.38,50.40],[6.30,50.33],[5.90,50.30],[5.60,50.28],[5.45,50.30],[5.30,50.40],[5.30,50.50],[5.20,50.60]]},
-    {"id":"lux","nom":"Luxembourg","dispatch":"Dispatch Luxembourg","telephone":"+32 61 00 00 11",
+    {"id":"lux","nom":"Luxembourg","dispatch":"CiLux","telephone":"800",
      "polygone":[[4.65,49.98],[5.15,50.05],[5.25,50.30],[5.30,50.40],[5.45,50.30],[5.60,50.28],[5.90,50.30],[6.17,50.25],[6.15,49.95],[6.12,49.80],[6.38,49.50],[5.85,49.50],[5.40,49.55],[5.10,49.65],[4.85,49.80],[4.70,49.90]]}
   ]
 }
@@ -124,7 +122,6 @@ function show(p, note){
   $('note').textContent = note || '';
   $('disp').textContent = p.dispatch;
   $('tel').textContent = p.telephone;
-  $('call').href = 'tel:' + p.telephone.replace(/[^+\d]/g, '');
   $('dispCard').hidden = false;
   $('sel').value = p.id;
 }
